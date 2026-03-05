@@ -1,7 +1,3 @@
--- ============================================================
--- EJECUTA ESTE SQL EN: Supabase Dashboard → SQL Editor
--- ============================================================
-
 -- 1. Tabla para mensajes del formulario de contacto
 CREATE TABLE IF NOT EXISTS contact_messages (
   id          UUID DEFAULT gen_random_uuid() PRIMARY KEY,
