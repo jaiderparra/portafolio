@@ -29,4 +29,4 @@ CREATE POLICY "Allow authenticated read"
 CREATE INDEX idx_contact_messages_created_at
   ON contact_messages (created_at DESC);
 
--- ¡Listo! La tabla está lista para recibir mensajes.
+
