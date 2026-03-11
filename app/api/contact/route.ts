@@ -45,10 +45,9 @@ export async function POST(req: NextRequest) {
     const { name, email, message } = result.data;
 
     // Cast explícito para evitar el error de TypeScript con Supabase
-    const { error: dbError } = await supabase
+    const { error: dbError } = await (supabase as any)
       .from("contact_messages")
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .insert([{ name, email, message }] as any);
+      .insert({ name, email, message });
 
     if (dbError) {
       console.error("Supabase error:", dbError);
